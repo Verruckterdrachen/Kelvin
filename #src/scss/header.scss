@@ -2,10 +2,10 @@
 .header {
 	&._scroll {
 		.header__wrapper {
-			background-color: rgba(0, 0, 0, 0.8);
+			background-color: rgba(255, 255, 255, 0.8);
 			@media (any-hover: hover) {
 				&:hover {
-					background-color: rgba(0, 0, 0, 0.9);
+					background-color: rgba(255, 255, 255, 0.9);
 				}
 			}
 		}

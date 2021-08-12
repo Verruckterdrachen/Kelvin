@@ -1,3 +1,41 @@
 //====================================================================================================
-
+.hello {
+	background-color: #f1f1f1;
+	&__body {
+		display: flex;
+		@include adaptiv-value("padding-top", 310, 120, 0);
+		@include adaptiv-value("padding-bottom", 220, 80, 0);
+		@include adaptiv-value("min-height", 770, 335, 1);
+		@media (min-width: $md3+px) {
+			background: url("../img/hello/hello-bg.png") 100% bottom no-repeat;
+			background-size: 505px/1200px * 100%;
+		}
+	}
+	&__content {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+		@media (min-width: $md3+px) {
+			text-align: left;
+			flex: 0 1 550px/1200px * 100%;
+		}
+		*:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__title {
+		@include adaptiv-value("font-size", 44, 28, 1);
+		line-height: 62 / 44 * 100%;
+		font-weight: 600;
+		margin: 0px 0px 15px/44px * 1em 0px;
+	}
+	&__text {
+		font-family: "Open Sans";
+		line-height: 28 / 14 * 100%;
+		color: $grayColor;
+		margin: 0px 0px 1em 0px;
+		letter-spacing: 0.9px;
+	}
+}
 //====================================================================================================
