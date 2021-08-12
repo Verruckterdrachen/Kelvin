@@ -95,6 +95,10 @@ body {
 		@include adaptiv-value("padding-top", 100, 40, 1);
 		@include adaptiv-value("padding-bottom", 110, 50, 1);
 	}
+	&__skills {
+		@include adaptiv-value("padding-top", 110, 40, 1);
+		@include adaptiv-value("padding-bottom", 130, 50, 1);
+	}
 }
 //===================================================================================================================================
 
