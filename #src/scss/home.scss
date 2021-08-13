@@ -126,9 +126,6 @@
 		overflow: hidden;
 		box-shadow: 0px 3px 20px 0px rgba(57, 64, 96, 0.05);
 		transition: box-shadow 0.3s ease 0s;
-		img {
-			transition: transform 0.3s ease 0s;
-		}
 		@media (min-width: $md2+px) {
 			flex: 0 0 205px;
 			padding: 0px 0px 239px 0px;
@@ -155,9 +152,13 @@
 			}
 		}
 		@media (any-hover: hover) {
+			img {
+				transition: all 0.3s ease 0s;
+				filter: grayscale(1);
+			}
 			&:hover {
 				img {
-					transform: scale(1.015);
+					filter: grayscale(0);
 				}
 				box-shadow: 0px 3px 20px 0px rgba(57, 64, 96, 0.25);
 			}
@@ -191,5 +192,36 @@
 		color: #666;
 	}
 }
+//============================================================================
+.projects {
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+		@media (max-width: $md2+px) {
+			grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+		}
+		@media (max-width: $md4+px) {
+			grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+		}
+	}
+	&__image {
+		overflow: hidden;
+		padding: 0px 0px 100% 0px;
+		@media (any-hover: hover) {
+			img {
+				transition: all 0.3s ease 0s;
+				filter: grayscale(1);
+			}
+			&:hover {
+				img {
+					/*transform: scale(1.015);*/
+					filter: grayscale(0);
+				}
+			}
+		}
+	}
+}
+//============================================================================
+
 //============================================================================
 //====================================================================================================

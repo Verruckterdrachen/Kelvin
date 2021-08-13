@@ -1121,9 +1121,6 @@ body.ie ._ibg img {
   box-shadow: 0px 3px 20px 0px rgba(57, 64, 96, 0.05);
   transition: box-shadow 0.3s ease 0s;
 }
-.skills__image img {
-  transition: transform 0.3s ease 0s;
-}
 @media (min-width: 991.98px) {
   .skills__image {
     flex: 0 0 205px;
@@ -1154,11 +1151,15 @@ body.ie ._ibg img {
   }
 }
 @media (any-hover: hover) {
+  .skills__image img {
+    transition: all 0.3s ease 0s;
+    filter: grayscale(1);
+  }
   .skills__image:hover {
     box-shadow: 0px 3px 20px 0px rgba(57, 64, 96, 0.25);
   }
   .skills__image:hover img {
-    transform: scale(1.015);
+    filter: grayscale(0);
   }
 }
 
@@ -1188,6 +1189,35 @@ body.ie ._ibg img {
   font-size: 14px;
   line-height: 200%;
   color: #666;
+}
+
+.projects__body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+}
+@media (max-width: 991.98px) {
+  .projects__body {
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  }
+}
+@media (max-width: 479.98px) {
+  .projects__body {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+}
+.projects__image {
+  overflow: hidden;
+  padding: 0px 0px 100% 0px;
+}
+@media (any-hover: hover) {
+  .projects__image img {
+    transition: all 0.3s ease 0s;
+    filter: grayscale(1);
+  }
+  .projects__image:hover img {
+    /*transform: scale(1.015);*/
+    filter: grayscale(0);
+  }
 }
 
 .page {
