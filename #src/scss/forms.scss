@@ -1,34 +1,78 @@
-//<FORM ()>====================================================================================================
-.form {
-	&__row {
-	}
-	&__column {
-	}
-	&__line {
-	}
-	&__input {
-	}
-	&__button {
-	}
-	&__error {
-	}
-}
-
-//</FORM>====================================================================================================
-
 //<BUTTONS (a.btn+tab)>====================================================================================================
 .button {
 	display: inline-flex;
-	padding: 0px 0px;
+	justify-content: center;
+	align-items: center;
+	@media (min-width: $md4+px) {
+		padding: 0px 150px;
+	}
+	min-height: 60px;
+	font-weight: 700;
+	line-height: 28 / 14 * 100%;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: $primaryColor;
+	letter-spacing: 1.2px;
+	transition: background-color 0.3s ease 0s;
 	@media (any-hover: hover) {
 		&:hover {
+			background-color: #e79e00;
 		}
-	}
-	&._fw {
-		width: 100%;
 	}
 }
 //</BUTTONS>====================================================================================================
+
+//<FORM ()>====================================================================================================
+.subscribe {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__form {
+		flex: 0 1 947px;
+		display: flex;
+		flex-direction: column;
+	}
+	&__body {
+		margin: 0px 0px 45px 0px;
+	}
+	&__line {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		&:not(:last-child) {
+			margin: 0px 0px 35px 0px;
+			@media (max-width: $md3+px) {
+				margin: 0px 0px 25px 0px;
+			}
+		}
+	}
+	&__input {
+		flex: 0 1 31.151%;
+		@media (max-width: $md3+px) {
+			flex: 1 1 100%;
+			&:not(:last-child) {
+				margin: 0px 0px 25px 0px;
+			}
+		}
+		padding: 15px;
+		color: $exLtGrayColor;
+		font-family: "Open Sans";
+		font-size: 12px;
+		line-height: 28 / 12 * 100%;
+		&_primary {
+			flex: 1 1 auto;
+			min-height: 157px;
+			resize: none;
+		}
+	}
+	&__button {
+		@media (min-width: $md4+px) {
+			align-self: center;
+		}
+	}
+}
+//</FORM>====================================================================================================
 
 //<SELECT (sel+tab)>====================================================================================================
 .select {

@@ -164,6 +164,36 @@
 					</div>
 				</div>
 			</section>
+			<section class="page__contact contact">
+				<div class="contact__container _container">
+					<h2 class="contact__title">Tell me what you need?</h2>
+					<div class="contact__text">
+						<p>
+							My phone number is <a href="tel:46475147">+46 475147</a>
+						<p>
+						<p>Alternatively, please send me a message using the contact form and I’ll get back to you.</p>
+					</div>
+					<div class="contact__subscribe subscribe">
+						<form data-message="subscribe" data-test action="#" class="subscribe__form">
+							<div class="subscribe__body">
+								<div class="subscribe__line">
+									<input autocomplete="off" type="text" name="form[]" data-value="Your Name" data-error="Error"
+										class="subscribe__input _req">
+									<input autocomplete="off" type="text" name="form[]" data-value="Your Email" data-error="Error"
+										class="subscribe__input _req _email">
+									<input autocomplete="off" type="text" name="form[]" data-value="Your Phone" data-error="Error"
+										class="subscribe__input _req _phone">
+								</div>
+								<div class="subscribe__line">
+									<textarea autocomplete="off" name="form[]" data-value="Message" data-error="Ошибка"
+										class="subscribe__input subscribe__input_primary _req"></textarea>
+								</div>
+							</div>
+							<button type="submit" class="subscribe__button button">send message</button>
+						</form>
+					</div>
+				</div>
+			</section>
 
 		</main>
 		@@include('_footer.html',{})

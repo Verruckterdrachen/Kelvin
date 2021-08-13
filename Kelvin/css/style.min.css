@@ -164,10 +164,80 @@ body._lock {
 
 .button {
   display: inline-flex;
-  padding: 0px 0px;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  font-weight: 700;
+  line-height: 200%;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #ffae00;
+  letter-spacing: 1.2px;
+  transition: background-color 0.3s ease 0s;
 }
-.button._fw {
-  width: 100%;
+@media (min-width: 479.98px) {
+  .button {
+    padding: 0px 150px;
+  }
+}
+@media (any-hover: hover) {
+  .button:hover {
+    background-color: #e79e00;
+  }
+}
+
+.subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subscribe__form {
+  flex: 0 1 947px;
+  display: flex;
+  flex-direction: column;
+}
+.subscribe__body {
+  margin: 0px 0px 45px 0px;
+}
+.subscribe__line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.subscribe__line:not(:last-child) {
+  margin: 0px 0px 35px 0px;
+}
+@media (max-width: 767.98px) {
+  .subscribe__line:not(:last-child) {
+    margin: 0px 0px 25px 0px;
+  }
+}
+.subscribe__input {
+  flex: 0 1 31.151%;
+  padding: 15px;
+  color: #bbbbbb;
+  font-family: "Open Sans";
+  font-size: 12px;
+  line-height: 233.3333333333%;
+}
+@media (max-width: 767.98px) {
+  .subscribe__input {
+    flex: 1 1 100%;
+  }
+  .subscribe__input:not(:last-child) {
+    margin: 0px 0px 25px 0px;
+  }
+}
+.subscribe__input_primary {
+  flex: 1 1 auto;
+  min-height: 157px;
+  resize: none;
+}
+@media (min-width: 479.98px) {
+  .subscribe__button {
+    align-self: center;
+  }
 }
 
 .select {
@@ -1310,6 +1380,32 @@ body.ie ._ibg img {
   font-weight: 400;
 }
 
+.contact {
+  background-color: #f6f6f6;
+}
+.contact__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin: 0px 0px 0.5555555556em 0px;
+}
+@media (max-width: 1200px) {
+  .contact__title {
+    font-size: calc(26px + 10 * ((100vw - 320px) / 880));
+  }
+}
+.contact__text {
+  text-align: center;
+  color: #999999;
+  line-height: 200%;
+  margin: 0px 0px 2.5em 0px;
+}
+.contact__text a {
+  color: #ffae00;
+}
+
 .page {
   flex: 1 1 auto;
 }
@@ -1353,5 +1449,19 @@ body.ie ._ibg img {
 @media (max-width: 1200px) {
   .page__testimonials {
     padding-bottom: calc(50px + 50 * ((100vw - 320px) / 880));
+  }
+}
+.page__contact {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+@media (max-width: 1200px) {
+  .page__contact {
+    padding-top: calc(40px + 70 * ((100vw - 320px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .page__contact {
+    padding-bottom: calc(50px + 60 * ((100vw - 320px) / 880));
   }
 }

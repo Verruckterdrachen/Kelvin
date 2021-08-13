@@ -300,6 +300,27 @@
 	}
 }
 //============================================================================
+.contact {
+	background-color: #f6f6f6;
+	&__title {
+		text-align: center;
+		font-weight: 600;
+		@include adaptiv-value("font-size", 36, 26, 1);
+		line-height: 120%;
+		text-transform: uppercase;
+		margin: 0px 0px 20px/36px * 1em 0px;
+	}
+	&__text {
+		text-align: center;
+		color: $ltGrayColor;
+		line-height: 28 / 14 * 100%;
+		a {
+			color: $primaryColor;
+		}
+		margin: 0px 0px 35px/14px * 1em 0px;
+	}
+}
+//============================================================================
 
 //============================================================================
 //====================================================================================================

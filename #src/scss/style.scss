@@ -105,6 +105,10 @@ body {
 		@include adaptiv-value("padding-top", 110, 40, 1);
 		@include adaptiv-value("padding-bottom", 100, 50, 1);
 	}
+	&__contact {
+		@include adaptiv-value("padding-top", 110, 40, 1);
+		@include adaptiv-value("padding-bottom", 110, 50, 1);
+	}
 }
 //===================================================================================================================================
 
