@@ -31,6 +31,15 @@
 		flex: 0 1 947px;
 		display: flex;
 		flex-direction: column;
+		position: relative;
+		.form__error {
+			position: absolute;
+			font-size: 18px;
+			bottom: -35px;
+			left: 50%;
+			transform: translate(-50%, 0px);
+			color: $primaryColor;
+		}
 	}
 	&__body {
 		margin: 0px 0px 45px 0px;
@@ -51,7 +60,8 @@
 		flex: 0 1 31.151%;
 		@media (max-width: $md3+px) {
 			flex: 1 1 100%;
-			&:not(:last-child) {
+			&:nth-child(1),
+			&:nth-child(2) {
 				margin: 0px 0px 25px 0px;
 			}
 		}
@@ -64,6 +74,10 @@
 			flex: 1 1 auto;
 			min-height: 157px;
 			resize: none;
+		}
+		&._error {
+			color: $primaryColor;
+			outline: 1px solid $primaryColor;
 		}
 	}
 	&__button {

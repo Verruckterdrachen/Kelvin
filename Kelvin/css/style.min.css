@@ -195,6 +195,15 @@ body._lock {
   flex: 0 1 947px;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+.subscribe__form .form__error {
+  position: absolute;
+  font-size: 18px;
+  bottom: -35px;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  color: #ffae00;
 }
 .subscribe__body {
   margin: 0px 0px 45px 0px;
@@ -225,7 +234,7 @@ body._lock {
   .subscribe__input {
     flex: 1 1 100%;
   }
-  .subscribe__input:not(:last-child) {
+  .subscribe__input:nth-child(1), .subscribe__input:nth-child(2) {
     margin: 0px 0px 25px 0px;
   }
 }
@@ -233,6 +242,10 @@ body._lock {
   flex: 1 1 auto;
   min-height: 157px;
   resize: none;
+}
+.subscribe__input._error {
+  color: #ffae00;
+  outline: 1px solid #ffae00;
 }
 @media (min-width: 479.98px) {
   .subscribe__button {
